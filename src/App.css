@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(61, 32, 32);
+    color: rgb(64, 123, 174);
+}
+
+main {
+    max-width: 300px;
+    margin: 100px auto;
+}
+
+h1 {
+    color: rgb(255, 250, 152);
+    margin-bottom: 16px;
+}
+
+h2 {
+    color: rgb(249, 201, 98);
+    margin-bottom: 10px;
+}
+
+form {
+    border: 3px solid rgb(138, 137, 137);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+}
+
+form input[type="text"] {
+    background: none;
+    color: floralwhite;
+    border: 0;
+    padding: 0 10px;
+    display: block;
+    width: 100%;
+}
+
+form button {
+    background-color: rgb(51, 255, 44);
+    border: 0;
+    border-radius: 5px;
+    width: 7%;
+    cursor: pointer;
+}
+
+.task {
+    background-color: rgb(185, 181, 181);
+    border-radius: 10px;
+    padding: 10px 7px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: opacity 0.3s linear;
+    position: relative;
+}
+
+.uncheckbox, .checkbox {
+    height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.done {
+    opacity: 0.5;
+}
+
+.done span {
+    position: relative;
+}
+
+.done span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    height: 1px;
+    background-color: #ebe5e5;
+    transform-origin: left;
+    animation: strikethrough 0.3s linear forwards;
+}
+
+@keyframes strikethrough {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#del {
+    background: none;
+    color: rgb(198, 48, 48);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    min-width: 30px;
+    min-height: 30px;
+}
